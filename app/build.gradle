@@ -26,7 +26,8 @@ dependencies {
 
     // Street hawk
     compile 'com.android.support:support-v4:23.+'
-    compile 'com.streethawk:library:+'
+    compile 'com.streethawk:core:1.7.15'
+    compile 'com.streethawk:push:1.7.15'
     compile 'com.google.android.gms:play-services:+'
     compile 'com.loopj.android:android-async-http:1.4.6'
 }

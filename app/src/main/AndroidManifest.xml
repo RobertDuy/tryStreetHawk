@@ -40,11 +40,11 @@
             android:name="app_key"
             android:value="menucard_dk" />
         <receiver
-            android:name="com.streethawk.library.GCMReceiver"
+            android:name="com.streethawk.library.push.GCMReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <!--Add package_name here-->
+                <!--Add  package_name here-->
                 <category android:name="com.menucard.dk" />
             </intent-filter>
         </receiver>
