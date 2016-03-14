@@ -1,10 +1,10 @@
 package com.menucard.dk;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 
-import com.streethawk.library.StreetHawk;
+import com.streethawk.library.core.StreetHawk;
+import com.streethawk.library.push.Push;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,8 +17,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void initStreetHawk() {
         try {
-            StreetHawk.INSTANCE.setGcmSenderId("558988786839");
+            Push.getInstance(this).registerForPushMessaging("558988786839");
             StreetHawk.INSTANCE.init(getApplication());
+
+            StreetHawk.INSTANCE.setAppKey("menucard_dk");  // APP_KEY registered with StreetHawk
+            StreetHawk.INSTANCE.init(getApplication());
+
         }catch (Exception e){
             e.printStackTrace();
         }
